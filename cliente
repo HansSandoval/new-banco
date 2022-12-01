@@ -1,0 +1,35 @@
+class Client:
+    def __init__(self,name,rut,naccount,keycode=0,ammount=0):
+        self.__name=name
+        self.__rut=rut
+        self.__naccount=naccount
+        self.__keycode=keycode
+        self.__addition=0
+        self.__ammount = 0
+
+    def deposit(self):
+        addition= int(input("Ingrese el monto a depositar en su cuenta:"))
+        if (addition>0):
+            self.__ammount +=addition
+        else:
+            print("Ingrese un monto mayor a 0")
+
+    def cuenta(self):
+        print("El balance de la cuenta es:",self.__ammount)
+    
+    def get_name(self): 
+        return self.__name
+    def get_rut(self): 
+        return self.__rut
+    def get_naccount(self): 
+        return self.__naccount
+    def get_keycode(self): 
+        return self.__keycode
+    def get_addition(self): 
+        return self.__addition
+    def get_ammount(self): 
+        return self.__ammount
+
+    ##crear puros set
+    def set_name(self,name):
+        self.__name=name
